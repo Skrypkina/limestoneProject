@@ -4,42 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Starter Kit</title>
-
-    <!-- Don't forget to delete this style tag. -->
-    <style>
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .intro {
-        text-align: center;
-      }
-
-      .intro h1 {
-        margin-top: 0;
-        font-weight: 500;
-        font-size: 40px;
-      }
-
-      .intro img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <title>LimestoneProject</title>
   </head>
-
   <body>
-    <article class="intro">
-      <h1>Webpack starter kit</h1>
+    <main class="mainContainer">
+      <div class="container">
+        <div class="row equal-cols"></div>
+      </div>
 
-      <!-- HTML image reference example. -->
-      <img src="./images/intro.png" alt="" width="640" />
-    </article>
+      <template id="user-card">
+        <div class="col-xl-4">
+          <div class="content">
+            <h3 class="name">{{name}}</h3>
+            <p class="descr">Username: {{username}}</p>
+            <p class="descr">Email: {{email}}</p>
+            <p class="descr">Street: {{address.street }}</p>
+            <p class="descr">Suite: {{address.suite }}</p>
+            <p class="descr">City: {{address.city }}</p>
+            <p class="descr">Zipcode: {{address.zipcode}}</p>
+            <p class="descr">Geo(lat): {{address.geo.lat}}</p>
+            <p class="descr">Geo(ing): {{address.geo.lng}}</p>
+            <p class="descr">Phone: {{phone}}</p>
+            <p class="descr">Website: {{website}}</p>
+            <p class="descr">Company: {{company.name}}</p>
+            <p class="descr">CatchPhrase: {{company.catchPhrase}}</p>
+            <p class="descr-phrase">{{company.bs}}</p>
+          </div>
+        </div>
+      </template>
+    </main>
   </body>
 </html>
